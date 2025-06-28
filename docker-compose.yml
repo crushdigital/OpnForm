@@ -100,8 +100,8 @@ services:
     container_name: opnform-ingress
     volumes:
       - ./docker/nginx.conf:/etc/nginx/templates/default.conf.template
-    ports:
-      - 80:80
+    expose:
+      - 80
     environment:
       - NGINX_MAX_BODY_SIZE=64m
     depends_on:
